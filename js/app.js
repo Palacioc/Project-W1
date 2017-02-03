@@ -5,6 +5,21 @@
 // refactorizar
 // poder hacer click en las cartas
 // hacer responsive
+  function showJordi(){
+    var jordi = document.getElementById("jordi");
+    jordi.style.opacity = 1;
+    setTimeout(function(){
+      jordi.style.opacity = 0;
+    }, 700);
+  }
+
+  function showPresentadores(){
+    var presentadores = document.getElementById("presentadores");
+    presentadores.style.opacity = 1;
+    setTimeout(function(){
+      presentadores.style.opacity = 0;
+    }, 2000);
+  }
 
   function appendNewEntry(){
     var entry = document.createElement("div");
@@ -34,22 +49,27 @@
     var feedback = document.getElementById("feedback");
     switch (message) {
       case "NVWN":
+        showPresentadores();
         feedback.innerHTML = "Wrong numbers!";
         feedback.className = "bad-feedback";
         break;
       case "NVWE":
+        showPresentadores();
         feedback.innerHTML = "Invalid equation!";
         feedback.className = "bad-feedback";
         break;
       case "NVWD":
+        showPresentadores();
         feedback.innerHTML = "Invalid division!";
         feedback.className = "bad-feedback";
         break;
       case "NVLE":
+        showPresentadores();
         feedback.innerHTML = "Letters?";
         feedback.className = "bad-feedback";
         break;
       case "VNHS":
+        showJordi();
         feedback.innerHTML = "New highscore!";
         feedback.className = "good-feedback";
         break;

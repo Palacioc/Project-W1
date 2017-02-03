@@ -18,7 +18,6 @@ body{
   font-family: Open Sans, sans-serif;
   text-align: center;
   background-color: $light-color;
-
 }
 
 h2{
@@ -27,6 +26,17 @@ h2{
 
 #player-name{
   font-size: 2rem;
+}
+
+.background-image{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  background-image: url("./../img/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header{
@@ -48,9 +58,11 @@ h2{
 
 .container{
   width: 100%;
+  bottom: 0px;
   margin-top: 90px;
   padding-top: 50px;
   padding-bottom: 50px;
+  border: 1px solid green;
 }
 
 .button{
@@ -124,14 +136,6 @@ input.namesInput{
   background-color: $card-color;
   display: inline-block;
   padding: $card-padding;
-}
-
-.game-container{
-  border: none;
-  display: block;
-  position: relative;
-  margin: 0 50px 0 50px;
-  background-color: $light-color;
 }
 
 .player-container{

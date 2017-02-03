@@ -13,11 +13,60 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Cifras:</h1>
-
-    <input type="text" name="" value="(2)" id="equation">
-    <button type="button" name="button" id="check">Check!</button>
+  <div class="header shadow">
+    <h1>Juego de las cifras</h1>
+  </div>
+  <div class="fade-background">
+    <div class="card center shadow" id="names-card">
+      <input type="text" name="" value="Player 1 name" class="namesInput">
+      <button class="button good-news" id="add">Add</button>
+      <button class="button bad-news" id="remove">Remove</button>
+      <button class="button center-block call-to-action" id="start">
+        Start new game
+      </button>
+    </div>
+  </div>
+  <div class="container" id="container">
+    <div class="card game-container">
+      <div class="card conditions-container">
+        <div class="card small-card" id="number-1">
+        </div>
+        <div class="card small-card" id="number-2">
+        </div>
+        <div class="card small-card" id="number-3">
+        </div>
+        <div class="card small-card" id="number-4">
+        </div>
+        <div class="card small-card" id="number-5">
+        </div>
+        <div class="card small-card" id="number-6">
+        </div>
+        <div class="card target" id="target">
+        </div>
+        <div class="card timer-container">
+          <div class="container-absolute">
+            <div class="bar" id="timer-bar">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card player-container">
+        <div class="cover">
+          <span class="welcome">Hi, Player. When you are ready:</span>
+          <button class="button center-block call-to-action" id="start-turn">Start turn</button>
+        </div>
+        <div class="cover hidden results">
+        </div>
+        <div class="marker">
+          <h1 id="player-name" class="stats player-name">Player name</h1>
+          <span id="best-approx" class="stats">Best approximation: </span>
+          <span id="score" class="stats score">Score: </span>
+        </div>
+        <input type="text" name="equation" value="Type here" id="equation" class="equation button">
+        <button type="send" name="send" id="check" class="button send">Check result</button>
+        <div id="feedback">Hello</div>
+      </div>
+    </div>
   </div>
   <script src="js/jquery-2.1.4.js" charset="utf-8"></script>
   <script src="js/logic.js" charset="utf-8"></script>
